@@ -1,0 +1,18 @@
+{
+  /* Only type-checking */
+  "include": ["src"],
+  "exclude": ["**/*.d.ts"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop":  true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "rootDirs": ["src"],
+    "module": "es2015",
+    "noEmit": true,
+  }
+}

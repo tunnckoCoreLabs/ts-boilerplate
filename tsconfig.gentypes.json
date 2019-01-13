@@ -1,0 +1,20 @@
+{
+  /* Only generating type (`.d.ts`) files */
+  "include": ["src"],
+  "exclude": ["**/__tests__/**", "**/*.d.ts"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop":  true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "rootDirs": ["src"],
+    "module": "es2015",
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true
+  }
+}

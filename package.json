@@ -1,0 +1,74 @@
+{
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "jest --watch --bail",
+    "dev": "jest --watch -c jest-dev.config.js",
+
+    "test": "jest --coverage --bail",
+
+    "prebuild": "rm -rf dist && tsc -p tsconfig.gentypes.json",
+    "build": "babel src -d dist -x .ts,.tsx --ignore '**/{*.d.ts,__tests__/**}'",
+    "postbuild": "prettier --write 'dist/**/*'"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "eslint": "^5.12.0",
+    "eslint-config-tunnckocore": "^2.0.0-rc.6",
+    "jest": "^23.6.0",
+    "jest-runner-tsc": "^1.3.2",
+    "prettier": "^1.15.3",
+    "typescript": "^3.2.2"
+  },
+  "browserslist": [
+    "node 8",
+    "node 10",
+    "not dead",
+    ">= 1%",
+    "last 2 Opera versions"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage"
+        }
+      ],
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "tunnckocore",
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts",
+            ".tsx",
+            ".js",
+            ".json"
+          ]
+        }
+      }
+    }
+  }
+}
