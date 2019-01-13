@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "jest --watch --bail",
-    "dev": "jest --watch -c jest-dev.config.js",
+    "dev": "jest --watch -c config/jest-dev.config.js",
 
     "test": "jest --coverage --bail",
 

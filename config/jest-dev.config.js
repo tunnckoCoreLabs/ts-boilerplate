@@ -3,8 +3,10 @@
  * Uses `testMatch` to only run the test files.
  */
 
+const path = require('path');
+
 module.exports = {
-  rootDir: __dirname,
+  rootDir: path.dirname(__dirname),
   displayName: 'test',
   transform: { '.(ts|tsx)': 'babel-jest' },
   testMatch: ['**/__tests__/**/*', '**/?(*.)+(spec|test)'],

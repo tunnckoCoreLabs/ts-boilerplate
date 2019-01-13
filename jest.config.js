@@ -2,5 +2,5 @@
 
 module.exports = {
   rootDir: __dirname,
-  projects: ['./jest-check.config.js', './jest-dev.config.js'],
+  projects: ['./config/jest-check.config.js', './config/jest-dev.config.js'],
 };
