@@ -9,7 +9,7 @@ module.exports = {
   rootDir: path.dirname(__dirname),
   displayName: 'test',
   transform: { '.(ts|tsx)': 'babel-jest' },
-  testMatch: ['**/__tests__/**/*', '**/?(*.)+(spec|test)'],
+  testMatch: ['**/test/**/*', '**/?(*.)+(spec|test)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   coverageThreshold: {
     global: {

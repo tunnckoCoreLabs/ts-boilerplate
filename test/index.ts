@@ -1,4 +1,4 @@
-import { add, minus, arrayify, concat } from '../index';
+import { add, minus, arrayify, concat } from '../src/index';
 
 test('some test add foo', () => {
   expect(add(1, 2)).toBe(3);

@@ -4,13 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "jest --watch --bail",
+    "start": "jest --watchAll --bail",
     "dev": "jest --watch -c config/jest-dev.config.js",
 
     "test": "jest --coverage --bail",
 
-    "prebuild": "rm -rf dist && tsc -p tsconfig.gentypes.json",
-    "build": "babel src -d dist -x .ts,.tsx --ignore '**/{*.d.ts,__tests__/**}'",
+    "gentypes": "tsc -p config/tsconfig.gentypes.json",
+    "prebuild": "rm -rf dist && yarn gentypes",
+    "build": "babel src -d dist -x .ts,.tsx --ignore '**/{*.d.ts,test/**}'",
     "postbuild": "prettier --write 'dist/**/*'"
   },
   "devDependencies": {
