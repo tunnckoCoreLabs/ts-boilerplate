@@ -6,9 +6,10 @@
   "scripts": {
     "start": "jest --watchAll --bail",
     "dev": "jest --watch -c config/jest-dev.config.js",
-
     "test": "jest --coverage --bail",
-
+    "lint": "eslint . --fix --quiet --format codeframe --ext .ts,.tsx",
+    "typecheck": "tsc",
+    "format": "prettier --write '**/*'",
     "gentypes": "tsc -p config/tsconfig.gentypes.json",
     "prebuild": "rm -rf dist && yarn gentypes",
     "build": "babel src -d dist -x .ts,.tsx --ignore '**/{*.d.ts,test/**}'",
@@ -33,6 +34,12 @@
     "jest-runner-tsc": "^1.3.2",
     "prettier": "^1.15.3",
     "typescript": "^3.2.2"
+  },
+  "jest": {
+    "projects": [
+      "./config/jest-check.config.js",
+      "./config/jest-dev.config.js"
+    ]
   },
   "browserslist": [
     "node 8",

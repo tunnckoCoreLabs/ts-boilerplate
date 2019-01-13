@@ -5,7 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "esModuleInterop":  true,
+    "esModuleInterop": true,
     "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": false,
