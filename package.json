@@ -1,7 +1,9 @@
 {
   "name": "ts-boilerplate",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.min.js",
   "license": "MIT",
   "scripts": {
     "start": "jest --watchAll --bail",
@@ -29,7 +31,7 @@
     "babel-jest": "^23.6.0",
     "babel-plugin-add-module-exports": "^1.0.0",
     "eslint": "^5.12.0",
-    "eslint-config-tunnckocore": "^2.0.0-rc.6",
+    "eslint-config-tunnckocore": "^2.0.0-rc.12",
     "jest": "^23.6.0",
     "jest-runner-tsc": "^1.3.2",
     "prettier": "^1.15.3",
@@ -62,21 +64,8 @@
   },
   "eslintConfig": {
     "extends": "tunnckocore",
-    "env": {
-      "browser": true,
-      "jest": true
-    },
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "extensions": [
-            ".ts",
-            ".tsx",
-            ".js",
-            ".json"
-          ]
-        }
-      }
+    "rules": {
+      "react/react-in-jsx-scope": "off"
     }
   }
 }

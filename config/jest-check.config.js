@@ -12,6 +12,6 @@ module.exports = {
   rootDir: path.dirname(__dirname),
   displayName: 'tsc',
   runner: 'jest-runner-tsc',
-  testMatch: ['**/src/**/*'],
+  testMatch: ['**/{src,test}/**/*'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
 };
